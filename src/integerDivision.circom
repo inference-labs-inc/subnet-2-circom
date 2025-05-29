@@ -25,8 +25,12 @@ template IntDiv(n) {
   signal rem <-- rem_hint;
   in[0] === quot * in[1] + rem;
 
+  _ <== Num2Bits(n)(quot);
+  _ <== Num2Bits(n)(rem);
+  _ <== Num2Bits(n)(in[1]);
+
   signal rem_is_valid <== LessThan(n)([rem, in[1]]);
   1 === rem_is_valid;
 
-  out <-- quot;
+  out <== quot;
 }
