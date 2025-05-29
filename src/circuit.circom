@@ -9,7 +9,7 @@ include "./integerDivision.circom";
 include "./responseTimeNormalized.circom";
 include "./responseTimeMetric.circom";
 
-template IncentiveMechansim(batch_size, bits){
+template IncentiveMechanism(batch_size, bits){
     signal input RATE_OF_DECAY;
     signal input RATE_OF_RECOVERY;
     signal input FLATTENING_COEFFICIENT;
@@ -156,4 +156,4 @@ component main {public [
     validator_uid,
     miner_uid,
     scaling
-]} = IncentiveMechansim(256,40);
+]} = IncentiveMechanism(256,40);
