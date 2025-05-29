@@ -1,0 +1,13 @@
+[1;96m
+           zkFuzz      
+     ZKP Circuit Fuzzer
+    [0m
+[1;32mWelcome to the zkFuzz[0m
+[32m══════════════════════════════════[0m
+[32m🧾 Loading Whitelists...[0m
+[32m🧩 Parsing Templates...[0m
+[32m⚙️ Parsing Function...[0m
+[32m🛒 Gathering Trace/Side Constraints...[0m
+[32m══════════════════════════════════[0m
+[32m══════════════════════════════════[0m
+[32m🩺 Scanning TCCT Instances...[0m
