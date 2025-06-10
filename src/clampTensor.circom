@@ -45,7 +45,18 @@ template Clamp(b){
     signal temp_1[2];
     signal temp_2[2];
 
+    component Num2Bits[4];
     component LessThan[2];
+
+    Num2Bits[0] = Num2Bits(b);
+    Num2Bits[1] = Num2Bits(b);
+    Num2Bits[2] = Num2Bits(b);
+    Num2Bits[3] = Num2Bits(b);
+
+    Num2Bits[0].in <== val;
+    Num2Bits[1].in <== min;
+    Num2Bits[2].in <== max;
+    Num2Bits[3].in <== temp_max;
 
     LessThan[0] = LessThan(b);
     LessThan[1] = LessThan(b);

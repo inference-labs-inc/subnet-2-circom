@@ -15,6 +15,7 @@ template ResponseTimeNormalized(b){
     component subtract1;
     component subtract2;
     component division;
+    component Num2Bits;
     component LessThan;
     component clamp;
 
@@ -31,6 +32,9 @@ template ResponseTimeNormalized(b){
     division = IntDiv(b);
     division.in[0] <== subtract1.c*scaling;
     division.in[1] <== subtract2.c;
+
+    Num2Bits = Num2Bits(b);
+    Num2Bits.in <== MAXIMUM_RESPONSE_TIME_DECIMAL;
 
     LessThan = LessThan(b);
     LessThan.in[0] <== MAXIMUM_RESPONSE_TIME_DECIMAL;

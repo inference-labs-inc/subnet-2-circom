@@ -9,6 +9,7 @@ template ScoringFunction(b) {
     signal output out;
 
     component temp_sub[2];
+    component n2b;
     component lt;
     component int_div[5];
 
@@ -26,6 +27,9 @@ template ScoringFunction(b) {
     int_div[0].in[1] <== 121;
 
     combined[0] <== term[0] + int_div[0].out;
+
+    n2b = Num2Bits(b);
+    n2b.in <== response_time_normalized;
 
     lt = LessThan(b);
     lt.in[0] <== 50000000;

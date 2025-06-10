@@ -14,8 +14,15 @@ template DistanceFromScore(b){
     signal temp_sub;
     signal temp_sub_2;
 
+    component n2b_previous_score;
+    component n2b_maximum_score;
     component where;
     component positive;
+
+    n2b_previous_score = Num2Bits(b);
+    n2b_previous_score.in <== previous_score;
+    n2b_maximum_score = Num2Bits(b);
+    n2b_maximum_score.in <== maximum_score;
 
     positive = LessThan(b);
     positive.in[0] <== previous_score;
