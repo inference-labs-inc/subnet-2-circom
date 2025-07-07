@@ -156,4 +156,4 @@ component main {public [
     validator_uid,
     miner_uid,
     scaling
-]} = IncentiveMechanism(256,40);
+]} = IncentiveMechanism(1024,40);

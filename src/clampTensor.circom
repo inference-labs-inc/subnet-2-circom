@@ -56,7 +56,6 @@ template Clamp(b){
     Num2Bits[0].in <== val;
     Num2Bits[1].in <== min;
     Num2Bits[2].in <== max;
-    Num2Bits[3].in <== temp_max;
 
     LessThan[0] = LessThan(b);
     LessThan[1] = LessThan(b);
@@ -66,6 +65,9 @@ template Clamp(b){
     temp_1[0] <== val * (1 - LessThan[0].out);
     temp_2[0] <== min * LessThan[0].out;
     temp_max <==  temp_1[0] + temp_2[0];
+
+    Num2Bits[3].in <== temp_max;
+
 
     LessThan[1].in[0] <== max;
     LessThan[1].in[1] <== temp_max;
