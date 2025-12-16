@@ -1,6 +1,6 @@
-# Proof of Weights for Omron
+# Proof of Weights for Subnet 2
 
-This repo contains source files for the circom implementation of Omron's incentive mechanism.
+This repo contains source files for the circom implementation of Subnet 2's incentive mechanism.
 
 ## Steps to reproduce output
 
